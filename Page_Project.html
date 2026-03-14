@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>MATTHIEU_PEREZ_OS // PROJECTS</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&amp;family=Fira+Code:wght@400;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#00FF41",
+                            // Vintage Terminal Green
+                            "background-light": "#0a0a0a",
+                            // Obsidian
+                            "background-dark": "#050505",
+                        },
+                        fontFamily: {
+                            "display": ["Fira Code", "monospace"],
+                            "sans": ["Fira Code", "monospace"]
+                        },
+                        borderRadius: {
+                            "DEFAULT": "0px",
+                            "lg": "0px",
+                            "xl": "0px",
+                            "full": "9999px"
+                        },
+                    },
+                },
+            }
+        </script>
+        <style>
+            body {
+                background-color: #0a0a0a;
+                color: #00FF41;
+                text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+            }
+            .terminal-border {
+                border: 1px solid #00FF41;
+            }
+            .scanline {
+                width: 100%;
+                height: 2px;
+                background: rgba(0, 255, 65, 0.1);
+                position: fixed;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 100;
+            }
+            .crt-overlay {
+                background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+                background-size: 100% 2px, 3px 100%;
+                pointer-events: none;
+                position: fixed;
+                inset: 0;
+                z-index: 99;
+            }
+        </style>
+    </head>
+    <body class="font-display bg-background-light dark:bg-background-dark selection:bg-primary selection:text-black">
+        <div class="scanline"></div>
+        <div class="crt-overlay"></div>
+        <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+            <div class="layout-container flex h-full grow flex-col">
+                <!-- Navigation -->
+                <header class="flex items-center justify-between border-b border-primary/30 px-6 py-4 lg:px-20">
+                    <div class="flex items-center gap-4 text-primary">
+                        <span class="material-symbols-outlined text-3xl">terminal</span>
+                        <h2 class="text-xl font-bold tracking-tighter uppercase">M_PEREZ_OS v2.0</h2>
+                    </div>
+                    <nav class="hidden md:flex flex-1 justify-end gap-10 items-center">
+                        <a class="text-primary hover:bg-primary hover:text-black px-2 py-1 transition-colors text-sm font-bold" href="#">_HOME</a>
+                        <a class="text-primary bg-primary/20 px-2 py-1 text-sm font-bold border border-primary" href="#">_PROJECTS</a>
+                        <a class="text-primary hover:bg-primary hover:text-black px-2 py-1 transition-colors text-sm font-bold" href="#">_TERMINAL</a>
+                        <a class="text-primary hover:bg-primary hover:text-black px-2 py-1 transition-colors text-sm font-bold" href="#">_ARCHIVE</a>
+                        <button class="flex items-center justify-center p-2 border border-primary hover:bg-primary hover:text-black transition-colors">
+                            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        </button>
+                    </nav>
+                </header>
+                <main class="flex-1 px-6 py-10 lg:px-20 max-w-7xl mx-auto w-full">
+                    <!-- System Header -->
+                    <div class="mb-12 border-l-4 border-primary pl-6">
+                        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
+                            SYSTEM_PROJECTS_STABLE
+                        </h1>
+                        <div class="flex items-center gap-2 text-primary/70">
+                            <span class="animate-pulse">●</span>
+                            <p class="text-lg uppercase">Status: 3_FILES_LOCATED_IN_DIRECTORY</p>
+                        </div>
+                    </div>
+                    <!-- Projects Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project Knight -->
+                        <div class="terminal-border p-6 flex flex-col gap-6 bg-primary/5 hover:bg-primary/10 transition-all group">
+                            <div class="aspect-square w-full border border-primary/20 relative overflow-hidden flex items-center justify-center bg-black">
+                                <img class="w-full h-full object-cover opacity-60 grayscale brightness-150 contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Green glowing wireframe of a chess knight piece" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgH1sHFAXrWJzEMpmBfZ3PC8Q0UHKiB8Nb1Y2JlIzHYE-P9uiyHh-0FOoMJf7bd-jz2hql6wS96gAYZJ9M4rDJsPzwen4EWRFtROsiBF9Y6tOeEZrb4q8ITz6yyCLls2O0s7P-f2DN2u4ms-R4zoBQ8s-9dtG-GND2lK8m_s0rXjXT6tl4C8MMQmppn4QD4sqvJNJchky4e2Ebr0uIEh-LZ6e4N4O6LHYhkZ7Wywv4FKwvEmPCSrEzvk83oy_FBldIee2KT5dJEoY" style=" filter: sepia(100%) saturate(1000%) hue-rotate(80deg) brightness(0.8);"/>
+                                <div class="absolute top-2 left-2 bg-primary text-black px-2 py-1 text-xs font-bold uppercase">FILE_01</div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="text-2xl font-black mb-1">PROJECT_KNIGHT</h3>
+                                    <p class="text-primary/60 text-sm leading-relaxed uppercase" style=" color: #F0F0F0;">Solidity // React // Node.js</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs border border-primary px-2 py-0.5 font-bold">STATUS: MAINNET_LIVE</span>
+                                </div>
+                                <div class="flex flex-wrap gap-3 pt-4">
+                                    <button class="flex-1 bg-primary text-black py-2 text-xs font-bold hover:bg-primary/80 transition-colors">VIEW_SOURCE</button>
+                                    <button class="flex-1 border border-primary py-2 text-xs font-bold hover:bg-primary hover:text-black transition-colors">DOCS</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Rook -->
+                        <div class="terminal-border p-6 flex flex-col gap-6 bg-primary/5 hover:bg-primary/10 transition-all group">
+                            <div class="aspect-square w-full border border-primary/20 relative overflow-hidden flex items-center justify-center bg-black">
+                                <img class="w-full h-full object-cover opacity-60 grayscale brightness-150 contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Green glowing wireframe of a chess rook piece" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ3fV1bmMLGoARBM0HCUOrcdGmzO3ZM-QVscwlX1T6BG9eLdsp06D3ORqbJOdKSIOGaaaKLnSMmdO6y8ISHWqKtFXfu59WWJ5ihu-Fqb9Ax0Nd-enelc5ERIoNxMXk8AZkUsSQbpS4KndpybprwI9zASRPSXTczBSOouY9cQWqQwTJeBjxrFJ9Bs4ZFv-S53g6gi8Fo5Z_ta1SqCY7FI9m8ir0J_p9XrwsNysGvXdfKz-OEGQI2hOofIASAIvnb33tQ2dmib7bzA8" style=" filter: sepia(100%) saturate(1000%) hue-rotate(80deg) brightness(0.8);"/>
+                                <div class="absolute top-2 left-2 bg-primary text-black px-2 py-1 text-xs font-bold uppercase">FILE_02</div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="text-2xl font-black mb-1">PROJECT_ROOK</h3>
+                                    <p class="text-primary/60 text-sm leading-relaxed uppercase" style=" color: #F0F0F0;">Rust // WASM // Go</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs border border-primary px-2 py-0.5 font-bold">STATUS: BETA_STABLE</span>
+                                </div>
+                                <div class="flex flex-wrap gap-3 pt-4">
+                                    <button class="flex-1 bg-primary text-black py-2 text-xs font-bold hover:bg-primary/80 transition-colors">VIEW_SOURCE</button>
+                                    <button class="flex-1 border border-primary py-2 text-xs font-bold hover:bg-primary hover:text-black transition-colors">DOCS</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Bishop -->
+                        <div class="terminal-border p-6 flex flex-col gap-6 bg-primary/5 hover:bg-primary/10 transition-all group">
+                            <div class="aspect-square w-full border border-primary/20 relative overflow-hidden flex items-center justify-center bg-black">
+                                <img class="w-full h-full object-cover opacity-60 grayscale brightness-150 contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Green glowing wireframe of a chess bishop piece" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUQ39UMUCz5GiW-hK82Gyd3N6CcQRsHpabJGCvUqeZsW3FQEAesyOEHT-u9m84f2RtnM_i4fZnyGdG86SrH1GD97IT_KEUU7RxN09opafIBphSmZ-zFIn0PRQuNP-_6l-oibcX-NHXN003OPDGdhMI-PrTWQdWoicQA-bwYIGaGZChROv9BP83_Om8PhBHYMegLzGRTj4Wmgnogx1LFdz-l1f_ZOU_rytt21U7ob8s1TAA92LPaOY8ikZOHmAAg7ee0lbGI6lARaU" style=" filter: sepia(100%) saturate(1000%) hue-rotate(80deg) brightness(0.8);"/>
+                                <div class="absolute top-2 left-2 bg-primary text-black px-2 py-1 text-xs font-bold uppercase">FILE_03</div>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="text-2xl font-black mb-1">PROJECT_BISHOP</h3>
+                                    <p class="text-primary/60 text-sm leading-relaxed uppercase" style=" color: #F0F0F0;">TypeScript // Python // AWS</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs border border-primary px-2 py-0.5 font-bold">STATUS: DEV_SANDBOX</span>
+                                </div>
+                                <div class="flex flex-wrap gap-3 pt-4">
+                                    <button class="flex-1 bg-primary text-black py-2 text-xs font-bold hover:bg-primary/80 transition-colors">VIEW_SOURCE</button>
+                                    <button class="flex-1 border border-primary py-2 text-xs font-bold hover:bg-primary hover:text-black transition-colors">DOCS</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- System Metrics Table -->
+                    <div class="mt-20 border border-primary/30 p-8">
+                        <h2 class="text-xl font-bold mb-6 flex items-center gap-2 uppercase">
+                            <span class="material-symbols-outlined">analytics</span>
+                            SYSTEM_METRICS_LOG
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm border-collapse">
+                                <thead>
+                                    <tr class="border-b border-primary/30">
+                                        <th class="py-3 uppercase">ID_LABEL</th>
+                                        <th class="py-3 uppercase">UPTIME_INDEX</th>
+                                        <th class="py-3 uppercase">LATENCY_MS</th>
+                                        <th class="py-3 uppercase text-right">ENCRYPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-primary/10 hover:bg-primary/5">
+                                        <td class="py-4 font-bold">KNIGHT-01</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">99.982%</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">14ms</td>
+                                        <td class="py-4 text-right" style=" color: #F0F0F0;">AES-256-GCM</td>
+                                    </tr>
+                                    <tr class="border-b border-primary/10 hover:bg-primary/5">
+                                        <td class="py-4 font-bold">ROOK-01</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">98.450%</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">32ms</td>
+                                        <td class="py-4 text-right" style=" color: #F0F0F0;">ECC-384</td>
+                                    </tr>
+                                    <tr class="border-b border-primary/10 hover:bg-primary/5">
+                                        <td class="py-4 font-bold">BISHOP-01</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">100.00%</td>
+                                        <td class="py-4" style=" color: #F0F0F0;">8ms</td>
+                                        <td class="py-4 text-right" style=" color: #F0F0F0;">SHA-512</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+                <!-- Footer -->
+                <footer class="border-t border-primary/30 py-10 px-6 lg:px-20 mt-auto bg-black/50">
+                    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="space-y-2 text-center md:text-left">
+                            <div class="flex items-center gap-2 justify-center md:justify-start">
+                                <span class="material-symbols-outlined text-sm">copyright</span>
+                                <span class="text-sm font-bold uppercase tracking-widest">2024 M_PEREZ_INFRASTRUCTURE</span>
+                            </div>
+                            <p class="text-primary/40 text-xs">AUTHORIZED ACCESS ONLY. ALL SESSIONS LOGGED.</p>
+                        </div>
+                        <div class="flex gap-6">
+                            <a class="hover:text-white transition-colors uppercase text-sm font-bold border-b border-transparent hover:border-primary" href="#">GITHUB</a>
+                            <a class="hover:text-white transition-colors uppercase text-sm font-bold border-b border-transparent hover:border-primary" href="#">TWITTER</a>
+                            <a class="hover:text-white transition-colors uppercase text-sm font-bold border-b border-transparent hover:border-primary" href="#">LINKEDIN</a>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs uppercase font-bold text-primary/60">NODE: 192.168.1.104</p>
+                            <p class="text-[10px] text-primary/30">ENCRYPTION: ENABLED</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body></html>
