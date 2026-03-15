@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>TERMINAL - Matthieu Perez</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+        <style type="text/tailwindcss">
+            :root {
+                --terminal-green: #c0ff00;
+                --terminal-bg: #0a0a0a;
+            }
+            body {
+                background-color: var(--terminal-bg);
+                color: #ffffff;
+                font-family: 'JetBrains Mono', monospace;
+                line-height: 1.5;
+            }
+            .terminal-container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 2rem;
+                min-height: 100vh;
+            }
+            .prompt::before {
+                content: "guest@mperez:~$ ";
+                color: var(--terminal-green);
+            }
+            .cursor {
+                display: inline-block;
+                width: 8px;
+                height: 1.2em;
+                background-color: var(--terminal-green);
+                vertical-align: middle;
+                margin-left: 4px;
+            }
+            .output-block {
+                margin-bottom: 2rem;
+            }
+            .border-terminal {
+                border: 1px solid var(--terminal-green);
+            }
+            .ascii-art {
+                white-space: pre;
+                line-height: 1.1;
+                color: var(--terminal-green);
+            }
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #000;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #222;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--terminal-green);
+            }
+        </style>
+    </head>
+    <body class="antialiased selection:bg-[#c0ff00] selection:text-black">
+        <div class="terminal-container">
+            <div class="output-block opacity-70 text-xs">
+                Last login: Wed Oct 23 14:42:01 on ttys001<br/>
+                [SYSTEM INITIALIZING PORTFOLIO_V2... SUCCESS]
+            </div>
+            <div class="output-block">
+                <div class="ascii-art text-[8px] md:text-[10px] mb-4">
+                    ███╗ ███╗██████╗ ███████╗██████╗ ███████╗███████╗
+                    ████╗ ████║██╔══██╗██╔════╝██╔══██╗██╔════╝╚══███╔╝
+                    ██╔████╔██║██████╔╝█████╗ ██████╔╝█████╗ ███╔╝
+                    ██║╚██╔╝██║██╔═══╝ ██╔══╝ ██╔══██╗██╔══╝ ███╔╝
+                    ██║ ╚═╝ ██║██║ ███████╗██║ ██║███████╗███████╗
+                    ╚═╝ ╚═╝╚═╝ ╚══════╝╚═╝ ╚═╝╚══════╝╚══════╝
+                </div>
+                <p class="text-terminal-green">Matthieu Perez | Étudiant en informatique | INTJ-T | 17 Ans</p>
+                <p class="text-gray-500 text-sm">Type 'help' for available commands.</p>
+            </div>
+            <div class="output-block">
+                <p class="prompt">whoami --bio</p>
+                <div class="mt-4 border-l-2 border-[#c0ff00] pl-6 py-2 space-y-4">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="w-32 h-32 border border-[#c0ff00]/30 p-1 grayscale">
+                            <img alt="David Buste" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWX8jkg1aItj8-Hi-PShOAfl_LnB6pIjCGG6AAE2yKohVkod2jIavuoLihQAy6Ta3HTYLxCxTE2XDaYMhhz6UoRumI8BPYSOdYaOZMjDY5uAL-jsYUfXG512lPLS0Zx-UqGQJQusMlFzgNEHu9ikeV13mF30sfkoGIeu0E5sulK3seoYG6YHEr95MYUP4LvUbsrOlWoZI3Qs48-BLzYPF3wKa48tz2LSWvMdtPcK-v_EgyIrM5AaZRAuldtwrHz45jPLxZQOpa21I"/>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-terminal-green font-bold uppercase mb-2">&gt; BIOGRAPHY</p>
+                            <p class="text-sm leading-relaxed">
+                                Passionné d'informatique depuis toujours, je transforme mes difficultés d'apprentissage dys en force pour progresser et innover.
+                            </p>
+                            <p class="text-sm leading-relaxed mt-2 text-gray-400">
+                                "La victoire appartient à celui qui a la persévérance la plus longue." — Napoléon Bonaparte
+                            </p>
+                            <p class="text-[#c0ff00] mt-4 text-xs font-bold tracking-widest">AUTONOMIE // CRÉATIVITÉ // DÉTERMINATION</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="output-block">
+                <p class="prompt">ls -la /qualifications</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border border-white/10 p-4">
+                        <span class="text-terminal-green">[2023-2025]</span>
+                        <p class="font-bold">2E SECONDAIRE - INFORMATIQUE</p>
+                        <p class="text-xs text-gray-500">Status: In Progress</p>
+                    </div>
+                    <div class="border border-white/10 p-4">
+                        <span class="text-terminal-green">[2022-2024]</span>
+                        <p class="font-bold">CENTRE ASTY-MOULIN, NAMUR</p>
+                        <p class="text-xs text-gray-500">Node: Local Education</p>
+                    </div>
+                    <div class="border border-white/10 p-4">
+                        <span class="text-terminal-green">[2023]</span>
+                        <p class="font-bold">FORMATION À DISTANCE</p>
+                        <p class="text-xs text-gray-500">Protocol: Remote Learning</p>
+                    </div>
+                </div>
+            </div>
+            <div class="output-block">
+                <p class="prompt">cat projects/vision.png</p>
+                <div class="mt-4 border border-[#c0ff00]/20 p-2 relative">
+                    <div class="absolute top-2 right-4 text-[10px] text-terminal-green bg-black px-2">IMG_VIEWER_v1.0</div>
+                    <img alt="Project Vision" class="w-full h-auto opacity-60 grayscale border border-white/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrROUjRcJ1WFaVoWMgzdg5ObBBSYKNL2qc7bfTULoKdIdNsZHC0EKZ7_Yrs6sZh5Ka7j8IKiML3LVyELUWij_KGqhXKIj3qbwtEaJsZOub4w_dE4lOBgUpFmXBMI9xxc68t9PrZRJuwHlDb3WUr-eumH9LtCFp1rWk6zR6nA7s37Oudxw0_4AVUUMeQ0ypuPOtYuq_e-5fySLy2rios7Fyh0b72_nhLr7pnJMQxx3L_e55qCGXh-qDTBfqZOOirzwEnrzti61eCxs"/>
+                    <div class="p-4 bg-[#111] border-t border-[#c0ff00]/20">
+                        <p class="text-xs text-terminal-green italic italic">"Nos vertus et nos défauts sont inséparables, comme la force et la matière." — Nikola Tesla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="output-block">
+                <p class="prompt">echo $CORE_VALUES</p>
+                <div class="mt-6 py-12 border-y border-[#c0ff00] text-center">
+                    <div class="text-3xl md:text-6xl font-black text-terminal-green tracking-tighter">EXPLAIN. BUILD. DECODE.</div>
+                </div>
+            </div>
+            <div class="output-block">
+                <p class="prompt">contact --list</p>
+                <div class="mt-4 space-y-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div>
+                            <p class="text-gray-500 mb-2">/SOCIAL</p>
+                            <ul class="space-y-1">
+                                <li class="hover:text-terminal-green cursor-pointer">𝕏 Twitter</li>
+                                <li class="hover:text-terminal-green cursor-pointer">󱎒 Discord</li>
+                                <li class="hover:text-terminal-green cursor-pointer"> Instagram</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 mb-2">/INFO</p>
+                            <ul class="space-y-1">
+                                <li>Site Map</li>
+                                <li>Principalement</li>
+                                <li>Source Code</li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 text-right self-end text-terminal-green">
+                            <p class="text-[10px]">DESIGN SYSTEM [V2.0] TERMINAL_EMULATOR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex items-center">
+                <span class="prompt"></span>
+                <span class="cursor"></span>
+            </div>
+        </div>
+
+    </body></html>

@@ -59,11 +59,20 @@
                 z-index: 50;
                 pointer-events: none;
             }
+            .dev-label {
+                font-size: 0.65rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: rgba(0, 255, 65, 0.8);
+                margin: 0.5rem 0;
+                padding-left: 1.5rem;
+            }
         </style>
     </head>
     <body class="bg-background-dark selection:bg-primary selection:text-background-dark antialiased" style=" color: #F0F0F0;">
         <div class="scanline"></div>
         <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden border-x border-primary/30 max-w-7xl mx-auto">
+            <div class="dev-label">FR : Navigation principale • EN : Primary navigation</div>
             <!-- Navigation -->
             <header class="flex items-center justify-between border-b border-primary px-6 py-4 sticky top-0 bg-background-dark/90 backdrop-blur-sm z-40">
                 <div class="flex items-center gap-4">
@@ -81,10 +90,11 @@
                         DECODE.EXE
                     </button>
                 </nav>
-            </header>
-            <main class="flex-1">
-                <!-- Hero Section -->
-                <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary">
+                    </header>
+                    <main class="flex-1">
+                        <div class="dev-label">FR : Section d’introduction • EN : Hero / intro section</div>
+                        <!-- Hero Section -->
+                        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary">
                     <div class="lg:col-span-7 p-8 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-primary">
                         <div class="mb-4 inline-block border border-primary px-2 py-1 text-[10px] uppercase tracking-widest text-primary">System Status: Operational</div>
                         <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-8 text-primary">
@@ -111,9 +121,10 @@
                             <div class="mt-4 text-[10px] font-mono opacity-60">FIG_01: WIREFRAME_KING.OBJ</div>
                         </div>
                     </div>
-                </section>
-                <!-- About Me -->
-                <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="about">
+                        </section>
+                        <div class="dev-label">FR : À propos • EN : About section</div>
+                        <!-- About Me -->
+                        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="about">
                     <div class="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-primary">
                         <h2 class="text-3xl font-bold uppercase mb-4 text-primary">[01] ABOUT_ME</h2>
                         <div class="w-full aspect-square border border-primary p-2">
@@ -149,9 +160,10 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- Skill Radar Section -->
-                <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="skills">
+                        </section>
+                        <div class="dev-label">FR : Radar de compétences • EN : Skills radar section</div>
+                        <!-- Skill Radar Section -->
+                        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="skills">
                     <div class="lg:col-span-7 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-primary relative overflow-hidden">
                         <div class="absolute -right-20 -bottom-20 opacity-10">
                             <span class="material-symbols-outlined text-[300px] text-primary">chess_knight</span>
@@ -222,9 +234,10 @@
                             <p class="text-xs font-mono mt-2 text-primary">OPTIMAL PERFORMANCE DETECTED</p>
                         </div>
                     </div>
-                </section>
-                <!-- CV / Experience Section -->
-                <section class="border-b border-primary" id="cv">
+                        </section>
+                        <div class="dev-label">FR : Expérience / CV • EN : Experience log section</div>
+                        <!-- CV / Experience Section -->
+                        <section class="border-b border-primary" id="cv">
                     <div class="p-8 lg:p-12">
                         <h2 class="text-3xl font-bold uppercase mb-12 text-primary">[03] EXPERIENCE_LOG</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary">
@@ -276,9 +289,10 @@
                         </div>
                     </div>
                 </section>
-            </main>
-            <!-- Footer -->
-            <footer class="border-t border-primary bg-background-dark relative overflow-hidden" id="contact">
+                    </main>
+                    <div class="dev-label">FR : Pied de page • EN : Footer section</div>
+                    <!-- Footer -->
+                    <footer class="border-t border-primary bg-background-dark relative overflow-hidden" id="contact">
                 <div class="absolute inset-0 grid-line-x opacity-5"></div>
                 <div class="p-12 md:p-24 text-center relative z-10">
                     <div class="mb-8 flex justify-center gap-12 opacity-50">
