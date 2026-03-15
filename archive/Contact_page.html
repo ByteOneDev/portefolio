@@ -68,6 +68,26 @@
                 margin: 0.5rem 0;
                 padding-left: 1.5rem;
             }
+            .lang-switcher {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin: 2rem 0 1rem;
+            }
+            .lang-switcher button {
+                background: transparent;
+                border: 1px solid rgba(0, 255, 65, 0.6);
+                color: rgba(0, 255, 65, 0.9);
+                padding: 0.25rem 0.75rem;
+                font-size: 0.75rem;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: background 0.2s ease;
+            }
+            .lang-switcher button.active {
+                background: rgba(0, 255, 65, 0.2);
+            }
         </style>
     </head>
     <body class="bg-background-dark font-display min-h-screen relative overflow-x-hidden text-off-white">
@@ -83,18 +103,18 @@
                 <div class="flex items-center justify-between border-b border-primary/30 pb-4">
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary">terminal</span>
-                        <h2 class="text-lg font-bold tracking-tighter uppercase text-off-white">MATTHIEU_PEREZ // CONTACT_INTERFACE</h2>
+                        <h2 class="text-lg font-bold tracking-tighter uppercase text-off-white" data-i18n="contact.header">MATTHIEU_PEREZ // CONTACT_INTERFACE</h2>
                     </div>
                     <div class="flex gap-4 text-xs opacity-70 text-off-white">
                         <span>SYS_STATUS: OPTIMAL</span>
                         <span>LOC: 48.8566° N, 2.3522° E</span>
                     </div>
                 </div>
-                <div class="hatched-box p-8 text-center relative overflow-hidden">
-                    <h1 class="text-3xl md:text-5xl font-bold tracking-[0.2em] mb-2 uppercase">
+                    <div class="hatched-box p-8 text-center relative overflow-hidden">
+                    <h1 class="text-3xl md:text-5xl font-bold tracking-[0.2em] mb-2 uppercase" data-i18n="contact.init">
                         [CONTACT_INITIATED]
                     </h1>
-                    <p class="text-sm opacity-80 text-off-white">ESTABLISHING SECURE CONNECTION TO UPLINK_NODE: M.PEREZ</p>
+                    <p class="text-sm opacity-80 text-off-white" data-i18n="contact.subtitle">ESTABLISHING SECURE CONNECTION TO UPLINK_NODE: M.PEREZ</p>
                 </div>
             </header>
             <div class="dev-label">FR : Interface de contact // EN : Contact interface</div>
@@ -102,36 +122,39 @@
             <main class="terminal-border bg-black/40 backdrop-blur-sm p-6 md:p-10 relative">
                 <div class="flex items-center gap-2 mb-8 border-b border-primary/20 pb-2">
                     <div class="w-3 h-3 bg-primary"></div>
-                    <span class="text-xs uppercase tracking-widest text-off-white">Input_Buffer_Sequence_049</span>
+                    <span class="text-xs uppercase tracking-widest text-off-white" data-i18n="contact.status">Input_Buffer_Sequence_049</span>
                 </div>
                 <form action="#" class="space-y-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <!-- Name Field -->
                         <div class="flex flex-col gap-2">
-                            <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
-                                <span class="text-[10px] opacity-50 text-off-white">01</span> NAME_ID
-                            </label>
+                        <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
+                            <span class="text-[10px] opacity-50 text-off-white">01</span>
+                            <span data-i18n="contact.label.name">NAME_ID</span>
+                        </label>
                             <input class="bg-transparent border border-primary/40 focus:border-primary focus:ring-1 focus:ring-primary outline-none p-3 text-primary placeholder:opacity-30 w-full transition-all text-off-white" placeholder="ENTER_IDENTIFIER..." type="text"/>
                         </div>
                         <!-- Email Field -->
                         <div class="flex flex-col gap-2">
-                            <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
-                                <span class="text-[10px] opacity-50 text-off-white">02</span> EMAIL_ADDRESS
-                            </label>
+                        <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
+                            <span class="text-[10px] opacity-50 text-off-white">02</span>
+                            <span data-i18n="contact.label.email">EMAIL_ADDRESS</span>
+                        </label>
                             <input class="bg-transparent border border-primary/40 focus:border-primary focus:ring-1 focus:ring-primary outline-none p-3 text-primary placeholder:opacity-30 w-full transition-all text-off-white" placeholder="USER@HOST.EXT..." type="email"/>
                         </div>
                     </div>
                     <!-- Subject Dropdown -->
                     <div class="flex flex-col gap-2">
                         <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
-                            <span class="text-[10px] opacity-50 text-off-white">03</span> SUBJECT_TYPE
+                            <span class="text-[10px] opacity-50 text-off-white">03</span>
+                            <span data-i18n="contact.label.subject">SUBJECT_TYPE</span>
                         </label>
                         <div class="relative">
                             <select class="bg-black/60 border border-primary/40 focus:border-primary focus:ring-1 focus:ring-primary outline-none p-3 text-primary w-full appearance-none cursor-pointer text-off-white">
-                                <option value="PROJECT_QUERY">PROJECT_QUERY</option>
-                                <option value="COLLABORATION_REQ">COLLABORATION_REQ</option>
-                                <option value="SYSTEM_MAINTENANCE">SYSTEM_MAINTENANCE</option>
-                                <option value="GENERAL_DATA_TX">GENERAL_DATA_TX</option>
+                                <option value="PROJECT_QUERY" data-i18n="contact.option.project">PROJECT_QUERY</option>
+                                <option value="COLLABORATION_REQ" data-i18n="contact.option.collab">COLLABORATION_REQ</option>
+                                <option value="SYSTEM_MAINTENANCE" data-i18n="contact.option.system">SYSTEM_MAINTENANCE</option>
+                                <option value="GENERAL_DATA_TX" data-i18n="contact.option.general">GENERAL_DATA_TX</option>
                             </select>
                             <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
                                 <span class="material-symbols-outlined text-sm">expand_more</span>
@@ -141,40 +164,41 @@
                     <!-- Message Textarea -->
                     <div class="flex flex-col gap-2">
                         <label class="text-xs font-bold uppercase tracking-wider flex items-center gap-2 text-off-white">
-                            <span class="text-[10px] opacity-50 text-off-white">04</span> MESSAGE_BUFFER
+                            <span class="text-[10px] opacity-50 text-off-white">04</span>
+                            <span data-i18n="contact.label.message">MESSAGE_BUFFER</span>
                         </label>
                         <textarea class="bg-transparent border border-primary/40 focus:border-primary focus:ring-1 focus:ring-primary outline-none p-3 text-primary placeholder:opacity-30 w-full resize-none transition-all text-off-white" placeholder="COMPILE_MESSAGE_DATA_HERE..." rows="6"></textarea>
                     </div>
                     <!-- Footer and Submit -->
                     <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 border-t border-primary/20">
                         <div class="text-[10px] opacity-50 space-y-1 text-off-white">
-                            <p>&gt; CHECKING_PACKET_INTEGRITY... OK</p>
-                            <p>&gt; ENCRYPTING_DATA_STREAM... OK</p>
-                            <p>&gt; READY_FOR_UPLINK</p>
+                            <p data-i18n="contact.log.check">&gt; CHECKING_PACKET_INTEGRITY... OK</p>
+                            <p data-i18n="contact.log.encrypt">&gt; ENCRYPTING_DATA_STREAM... OK</p>
+                            <p data-i18n="contact.log.ready">&gt; READY_FOR_UPLINK</p>
                         </div>
                         <button class="bg-primary text-black font-bold px-10 py-4 hover:bg-primary/90 transition-colors uppercase tracking-[0.2em] w-full md:w-auto" type="submit">
-                            SEND_PACKET_NOW
+                            <span data-i18n="contact.button">SEND_PACKET_NOW</span>
                         </button>
                     </div>
                 </form>
             </main>
             <div class="dev-label">FR : Informations annexes // EN : Sidebar info</div>
             <!-- Sidebar Components / Additional Info -->
-            <footer class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="terminal-border p-4 bg-black/20">
-                    <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white">Direct_Comms</h4>
-                    <p class="text-sm text-off-white">COMMS_LINK: HI@MATTHIEUPEREZ.DEV</p>
-                </div>
-                <div class="terminal-border p-4 bg-black/20">
-                    <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white">Sync_Frequency</h4>
-                    <p class="text-sm text-off-white">TZ: GMT+1 (PARIS/FR)</p>
-                </div>
-                <div class="terminal-border p-4 bg-black/20">
-                    <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white">Uptime</h4>
-                    <p class="text-sm text-off-white">99.9% // PERSISTENT_REPLY_MODE</p>
-                </div>
-            </footer>
-            <div class="mt-16 text-center opacity-30 text-[10px] uppercase tracking-widest text-off-white">
+                <footer class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="terminal-border p-4 bg-black/20">
+                        <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white" data-i18n="contact.sidebar.comms">Direct_Comms</h4>
+                        <p class="text-sm text-off-white" data-i18n="contact.sidebar.comms.link">COMMS_LINK: HI@MATTHIEUPEREZ.DEV</p>
+                    </div>
+                    <div class="terminal-border p-4 bg-black/20">
+                        <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white" data-i18n="contact.sidebar.sync">Sync_Frequency</h4>
+                        <p class="text-sm text-off-white" data-i18n="contact.sidebar.sync.value">TZ: GMT+1 (PARIS/FR)</p>
+                    </div>
+                    <div class="terminal-border p-4 bg-black/20">
+                        <h4 class="text-[10px] opacity-50 mb-2 uppercase text-off-white" data-i18n="contact.sidebar.uptime">Uptime</h4>
+                        <p class="text-sm text-off-white" data-i18n="contact.sidebar.uptime.value">99.9% // PERSISTENT_REPLY_MODE</p>
+                    </div>
+                </footer>
+            <div class="mt-16 text-center opacity-30 text-[10px] uppercase tracking-widest text-off-white" data-i18n="contact.copyright">
                 (C) 1984-2024 MATTHIEU_PEREZ // ALL_RIGHTS_RESERVED
             </div>
         </div>
