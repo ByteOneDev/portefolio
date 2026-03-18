@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Matthieu Perez - Contact</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'cream': '#f6f0e3',
+              'dark-brown': '#3d352b',
+              'muted-green': '#658b7c',
+              'pale-yellow': '#eaddad',
+              'border-green': '#658b7c'
+            },
+            fontFamily: {
+              'serif': ['"Playfair Display"', 'Georgia', 'serif'],
+              'sans': ['"Inter"', 'Helvetica', 'Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f6f0e3;
+        color: #3d352b;
+      }
+      .grid-bg {
+        background-image: linear-gradient(to right, rgba(101, 139, 124, 0.2) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(101, 139, 124, 0.2) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  </head>
+  <body class="font-sans antialiased min-h-screen flex flex-col items-center">
+    <div class="w-full max-w-5xl px-6 py-8">
+      <header class="flex justify-start space-x-6 text-sm mb-16 font-medium">
+        <a class="hover:opacity-70 transition-opacity" href="AboutME_V4.html">1. e4 About</a>
+        <a class="hover:opacity-70 transition-opacity" href="Project_pageV4.html">2. Nf3 Projects</a>
+        <a class="hover:opacity-70 transition-opacity text-dark-brown/90 font-semibold" href="Contact_page_V4.html">3. Bc4 Contact</a>
+      </header>
+      <main>
+        <section class="text-center mb-16">
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 max-w-4xl mx-auto text-dark-brown">
+            CONTACT_INITIATED
+          </h1>
+          <p class="text-sm font-medium uppercase tracking-[0.5em] text-muted-green mb-8">
+            Transmission directe • Réseau sécurisé • Signal garanti
+          </p>
+          <div class="relative w-full max-w-3xl mx-auto h-[320px] border border-border-green rounded-xl grid-bg flex items-center justify-center mb-8 overflow-hidden bg-cream/70">
+            <div class="absolute inset-0 flex items-center justify-center text-dark-brown/70 text-3xl font-bold">
+              <span class="material-symbols-outlined text-5xl">commute</span>
+            </div>
+            <div class="absolute bottom-6 left-6 text-xs uppercase tracking-[0.7em] text-dark-brown/60">
+              MATTHIEU_PEREZ // UPLINK NODE
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed text-dark-brown/80 mb-6">
+            Les répliques sont traitées en moins de 24h, avec des schémas d’analyse et des marques de stratégie livrés sous format typewritten.
+          </p>
+          <a href="mailto:hello@mperez.terminal" class="border border-dark-brown px-6 py-2 rounded-full hover:bg-dark-brown hover:text-cream transition-colors font-medium bg-transparent inline-block">
+            Envoyer un message
+          </a>
+        </section>
+        <section class="grid gap-6 md:grid-cols-3 mb-16">
+          <article class="border border-border-green p-6 bg-cream/50 rounded-lg">
+            <h3 class="font-serif text-2xl text-dark-brown mb-3">Comm. directe</h3>
+            <p class="text-sm text-dark-brown/80 mb-3">hello@mperez.terminal</p>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-muted-green">Système sécurisé</p>
+          </article>
+          <article class="border border-border-green p-6 bg-cream/50 rounded-lg">
+            <h3 class="font-serif text-2xl text-dark-brown mb-3">Réseau</h3>
+            <p class="text-sm text-dark-brown/80 mb-3">LinkedIn / M-Perez</p>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-muted-green">Signal : Opt-in</p>
+          </article>
+          <article class="border border-border-green p-6 bg-cream/50 rounded-lg">
+            <h3 class="font-serif text-2xl text-dark-brown mb-3">Coordonnées</h3>
+            <p class="text-sm text-dark-brown/80 mb-3">GMT+1 • Paris</p>
+            <p class="text-sm text-dark-brown/80 mb-3">Nuémro Pro</p>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-muted-green">Disponibilité : Planning ouvert</p>
+          </article>
+        </section>
+        <section class="border border-border-green rounded-3xl p-10 bg-cream/70 mb-16">
+          <h2 class="font-serif text-3xl text-dark-brown mb-4 text-center">Faites passer votre message</h2>
+          <form class="space-y-6 max-w-3xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <label class="flex flex-col text-sm uppercase tracking-[0.4em] text-dark-brown/70">
+                Nom
+                <input class="mt-2 border border-border-green rounded-lg px-4 py-3 bg-transparent focus:outline-none" type="text" placeholder="Votre nom"/>
+              </label>
+              <label class="flex flex-col text-sm uppercase tracking-[0.4em] text-dark-brown/70">
+                Email
+                <input class="mt-2 border border-border-green rounded-lg px-4 py-3 bg-transparent focus:outline-none" type="email" placeholder="vous@host.ext"/>
+              </label>
+            </div>
+            <label class="flex flex-col text-sm uppercase tracking-[0.4em] text-dark-brown/70">
+              Message
+              <textarea class="mt-2 border border-border-green rounded-xl px-4 py-3 bg-transparent focus:outline-none" rows="5" placeholder="Décrivez votre demande"></textarea>
+            </label>
+            <div class="text-center">
+              <button class="border border-dark-brown px-8 py-3 rounded-full hover:bg-dark-brown hover:text-cream transition-colors font-medium bg-transparent" type="submit">
+                Envoyer la requête
+              </button>
+            </div>
+          </form>
+        </section>
+        <section class="text-center">
+          <p class="text-xs uppercase tracking-[0.8em] text-muted-green mb-4">Historique</p>
+          <p class="text-sm leading-relaxed text-dark-brown/80 mb-6">
+            Chaque échange est consigné dans un journal de bord et sert de base pour les prochains mouvements tactiques.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-[0.6em] text-dark-brown/60">
+            <span>READY</span>
+            <span>CONNECTED</span>
+            <span>SECURED</span>
+          </div>
+        </section>
+      </main>
+      <footer class="mt-16 text-center text-xs uppercase tracking-[0.4em] text-dark-brown/60">
+        © 2024 MATTHIEU_PEREZ // CONTACT_GATEWAY
+      </footer>
+    </div>
+  </body></html>

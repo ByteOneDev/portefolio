@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;900&amp;family=JetBrains+Mono:wght@400;700&amp;family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00FF41",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Libre Baskerville", "serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-line-x { background-image: linear-gradient(to right, #00FF41 1px, transparent 1px); background-size: 40px 100%; }
+        .grid-line-y { background-image: linear-gradient(to bottom, #00FF41 1px, transparent 1px); background-size: 100% 40px; }
+        .terminal-border { border: 1px solid #00FF41; }
+        body { font-family: 'JetBrains Mono', monospace; }
+        h1, h2, h3 { font-family: 'Libre Baskerville', serif; }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-dark selection:bg-primary selection:text-background-dark antialiased" style="color: #F0F0F0;">
+<div class="scanline"></div>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden border-x border-primary/30 max-w-7xl mx-auto">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-primary px-6 py-4 sticky top-0 bg-background-dark/90 backdrop-blur-sm z-40">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center border border-primary">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+</div>
+<h2 class="text-xl font-black uppercase tracking-tighter text-primary">M. PEREZ</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-xs hover:bg-primary hover:text-background-dark px-2 py-1 transition-colors text-primary" href="#about">1. e4 ABOUT</a>
+<a class="text-xs hover:bg-primary hover:text-background-dark px-2 py-1 transition-colors text-primary" href="#skills">2. Nf3 SKILLS</a>
+<a class="text-xs hover:bg-primary hover:text-background-dark px-2 py-1 transition-colors text-primary" href="#cv">3. d4 CV</a>
+<a class="text-xs hover:bg-primary hover:text-background-dark px-2 py-1 transition-colors text-primary" href="#contact">4. c4 CONTACT</a>
+<button class="border border-primary px-4 py-1 text-xs font-bold hover:bg-primary hover:text-background-dark transition-all text-primary">
+                    DECODE.EXE
+                </button>
+</nav>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary">
+<div class="lg:col-span-7 p-8 lg:p-16 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-primary">
+<div class="mb-4 inline-block border border-primary px-2 py-1 text-[10px] uppercase tracking-widest text-primary">System Status: Operational</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-8 text-primary">
+                        STRATEGIC <br/> HERITAGE
+                    </h1>
+<p class="text-lg max-w-xl font-mono leading-relaxed mb-10 opacity-80">
+                        Matthieu Perez: Computer Science Student &amp; Digital Architect. Solving complex problems with grandmaster precision and legacy logic.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark px-8 py-4 font-bold text-sm hover:invert transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">play_arrow</span> INITIALIZE_TERMINAL
+                        </button>
+<button class="border border-primary px-8 py-4 font-bold text-sm hover:bg-primary/10 transition-all uppercase">
+                            View_Manifesto
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative min-h-[400px] flex items-center justify-center overflow-hidden bg-primary/5">
+<div class="absolute inset-0 grid-line-x opacity-20"></div>
+<div class="absolute inset-0 grid-line-y opacity-20"></div>
+<!-- Wireframe Visual Placeholder -->
+<div class="relative z-10 p-12 text-center">
+<span class="material-symbols-outlined text-[160px] opacity-40 animate-pulse text-primary">strategy</span>
+<div class="mt-4 text-[10px] font-mono opacity-60">FIG_01: WIREFRAME_KING.OBJ</div>
+</div>
+</div>
+</section>
+<!-- About Me -->
+<section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="about">
+<div class="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-primary">
+<h2 class="text-3xl font-bold uppercase mb-4 text-primary">[01] ABOUT_ME</h2>
+<div class="w-full aspect-square border border-primary p-2">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center relative group">
+<img class="w-full h-full object-cover grayscale brightness-50 contrast-150 mix-blend-screen" data-alt="Cyberpunk style portrait of a student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7PMy4lYom1MSqvYLh_LzKzFCeIm287z2Lrinl5zgSaP2uj9raI3l0Ft0aD6oTUhL4VPGYl8PUoZVOJ6CEIAUdIz4uWzwSV80wGLb1erivC9mu9xKvm876gfYSQps_Yi0jJcvYNHxlorCnjjtj_yHL9ArAxwBJoUlfh3bf0KYjoHevBmA6gnnmPo97D8_tqixZAa99__Ib1ehUzS4aH_DFUtLaABpqHsLOSIQuaw9LNN6hMF6jVGgw6TYhQlF1RvysBoEu_PDB6Xc"/>
+<div class="absolute inset-0 border-2 border-primary/50 m-2"></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 p-8 lg:p-12 flex flex-col justify-center">
+<p class="text-xl font-mono leading-relaxed mb-6">
+                        &gt; A developer operating at the intersection of vintage aesthetics and cutting-edge computation. Specializing in robust systems and tactical code execution.
+                    </p>
+<p class="text-sm font-mono opacity-70 leading-relaxed mb-8">
+                        My approach draws from the rigorous logic of classical chess and the raw efficiency of early computing systems. Every line of code is a calculated move toward a sustainable and secure digital architecture.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="border border-primary/30 p-4">
+<div class="text-[10px] opacity-50 uppercase">Current_Rank</div>
+<div class="text-lg text-primary">Undergraduate</div>
+</div>
+<div class="border border-primary/30 p-4">
+<div class="text-[10px] opacity-50 uppercase">Specialization</div>
+<div class="text-lg text-primary">Cybernetics</div>
+</div>
+<div class="border border-primary/30 p-4">
+<div class="text-[10px] opacity-50 uppercase">Location</div>
+<div class="text-lg text-primary">Global_Node</div>
+</div>
+<div class="border border-primary/30 p-4">
+<div class="text-[10px] opacity-50 uppercase">Status</div>
+<div class="text-lg text-primary">Available</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skill Radar Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 border-b border-primary" id="skills">
+<div class="lg:col-span-7 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-primary relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 opacity-10">
+<span class="material-symbols-outlined text-[300px] text-primary">chess_knight</span>
+</div>
+<h2 class="text-3xl font-bold uppercase mb-12 text-primary">[02] SKILL_RADAR</h2>
+<div class="space-y-8 relative z-10">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-primary">FRONTEND_ENGINES</span>
+<span class="text-primary">92%</span>
+</div>
+<div class="h-4 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 92%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-primary">BACKEND_INFRA</span>
+<span class="text-primary">88%</span>
+</div>
+<div class="h-4 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 88%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-primary">ARTIFICIAL_INTEL</span>
+<span class="text-primary">75%</span>
+</div>
+<div class="h-4 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 75%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-primary">SEC_PROTOCOLS</span>
+<span class="text-primary">81%</span>
+</div>
+<div class="h-4 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 81%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-mono">
+<span class="text-primary">SYS_ARCHITECTURE</span>
+<span class="text-primary">95%</span>
+</div>
+<div class="h-4 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 95%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 p-8 flex flex-col items-center justify-center bg-primary/5">
+<div class="relative w-64 h-64 border border-primary/40 rounded-full flex items-center justify-center">
+<div class="absolute inset-0 border border-primary/20 rounded-full scale-75"></div>
+<div class="absolute inset-0 border border-primary/20 rounded-full scale-50"></div>
+<div class="w-1 h-32 bg-primary absolute top-0 origin-bottom transform rotate-45 opacity-60"></div>
+<div class="w-1 h-32 bg-primary absolute top-0 origin-bottom transform rotate-[160deg] opacity-60"></div>
+<div class="text-[10px] absolute top-2">ARCHITECTURE</div>
+<div class="text-[10px] absolute right-2 top-1/2">FRONTEND</div>
+<div class="text-[10px] absolute bottom-2">AI</div>
+<div class="text-[10px] absolute left-2 top-1/2">SECURITY</div>
+<span class="material-symbols-outlined text-4xl text-primary">radar</span>
+</div>
+<div class="mt-8 text-center">
+<p class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-60">Scanning competencies...</p>
+<p class="text-xs font-mono mt-2 text-primary">OPTIMAL PERFORMANCE DETECTED</p>
+</div>
+</div>
+</section>
+<!-- CV / Experience Section -->
+<section class="border-b border-primary" id="cv">
+<div class="p-8 lg:p-12">
+<h2 class="text-3xl font-bold uppercase mb-12 text-primary">[03] EXPERIENCE_LOG</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary">
+<div class="bg-background-dark p-8 border border-primary/20">
+<div class="text-xs font-mono text-primary/60 mb-2">2022 — PRESENT</div>
+<h3 class="text-2xl font-bold mb-4 text-primary">Lead Developer / Systems Architect</h3>
+<p class="text-sm font-mono leading-relaxed opacity-80">
+                                Spearheading the development of decentralized database protocols. Focused on low-latency execution and high-security data sharding.
+                            </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-[10px] border border-primary px-2 py-0.5">RUST</span>
+<span class="text-[10px] border border-primary px-2 py-0.5">WASM</span>
+<span class="text-[10px] border border-primary px-2 py-0.5">K8S</span>
+</div>
+</div>
+<div class="bg-background-dark p-8 border border-primary/20">
+<div class="text-xs font-mono text-primary/60 mb-2">2021 — 2022</div>
+<h3 class="text-2xl font-bold mb-4 text-primary">Security Analyst Intern</h3>
+<p class="text-sm font-mono leading-relaxed opacity-80">
+                                Conducted penetration testing and vulnerability assessments for financial sector legacy systems. Optimized firewall logic by 40%.
+                            </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-[10px] border border-primary px-2 py-0.5">PYTHON</span>
+<span class="text-[10px] border border-primary px-2 py-0.5">LINUX</span>
+<span class="text-[10px] border border-primary px-2 py-0.5">WIRESHARK</span>
+</div>
+</div>
+<div class="bg-background-dark p-8 border border-primary/20">
+<div class="text-xs font-mono text-primary/60 mb-2">2019 — 2021</div>
+<h3 class="text-2xl font-bold mb-4 text-primary">BSc. Computer Science</h3>
+<p class="text-sm font-mono leading-relaxed opacity-80">
+                                Focused on Algorithmic Theory and Discrete Mathematics. Graduated with honors in Cyber-Security track.
+                            </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-[10px] border border-primary px-2 py-0.5">ALGORITHMS</span>
+<span class="text-[10px] border border-primary px-2 py-0.5">C++</span>
+</div>
+</div>
+<div class="bg-background-dark p-8 border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-primary">chess_rook</span>
+</div>
+<div class="text-xs font-mono text-primary/60 mb-2">Ongoing</div>
+<h3 class="text-2xl font-bold mb-4 text-primary">MSc. Applied AI</h3>
+<p class="text-sm font-mono leading-relaxed opacity-80">
+                                Researching neural networks and their application in automated threat detection and defensive digital maneuverability.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-primary bg-background-dark relative overflow-hidden" id="contact">
+<div class="absolute inset-0 grid-line-x opacity-5"></div>
+<div class="p-12 md:p-24 text-center relative z-10">
+<div class="mb-8 flex justify-center gap-12 opacity-50">
+<span class="material-symbols-outlined text-4xl text-primary">chess_knight</span>
+<span class="material-symbols-outlined text-4xl text-primary">chess_king</span>
+<span class="material-symbols-outlined text-4xl text-primary">chess_rook</span>
+</div>
+<h2 class="text-4xl md:text-7xl lg:text-8xl font-black mb-12 tracking-tighter leading-tight text-primary">
+                    EXPLAIN. <br class="md:hidden"/> BUILD. <br class="md:hidden"/> DECODE.
+                </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 font-mono text-sm">
+<a class="hover:text-white transition-colors underline decoration-primary underline-offset-4 text-primary" href="mailto:hello@mperez.terminal">HELLO@MPEREZ.TERMINAL</a>
+<span class="hidden md:inline text-primary/30">|</span>
+<a class="hover:text-white transition-colors text-primary" href="#">GITHUB/MPEREZ-STRAT</a>
+<span class="hidden md:inline text-primary/30">|</span>
+<a class="hover:text-white transition-colors text-primary" href="#">LINKEDIN/M-PEREZ</a>
+</div>
+<div class="mt-20 pt-8 border-t border-primary/20 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono opacity-50 uppercase tracking-[0.3em]">
+<span class="text-primary">© 2024 MATTHIEU PEREZ // ALL RIGHTS RESERVED</span>
+<span class="text-primary">BUILD_V_2.4.0</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-xs text-primary">encrypted</span>
+<span class="text-primary">SECURED CONNECTION</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -201,5 +201,116 @@
             <div class="mt-16 text-center opacity-30 text-[10px] uppercase tracking-widest text-off-white" data-i18n="contact.copyright">
                 (C) 1984-2024 MATTHIEU_PEREZ // ALL_RIGHTS_RESERVED
             </div>
+            <div class="lang-switcher" role="group" aria-label="Language switcher">
+                <button type="button" data-lang="en">EN</button>
+                <button type="button" data-lang="fr">FR</button>
+                <button type="button" data-lang="es">ES</button>
+            </div>
+            <script>
+                (function () {
+                    const translations = {
+                        en: {
+                            'contact.header': 'MATTHIEU_PEREZ // CONTACT_INTERFACE',
+                            'contact.init': '[CONTACT_INITIATED]',
+                            'contact.subtitle': 'ESTABLISHING SECURE CONNECTION TO UPLINK_NODE: M.PEREZ',
+                            'contact.status': 'Input_Buffer_Sequence_049',
+                            'contact.label.name': 'NAME_ID',
+                            'contact.label.email': 'EMAIL_ADDRESS',
+                            'contact.label.subject': 'SUBJECT_TYPE',
+                            'contact.label.message': 'MESSAGE_BUFFER',
+                            'contact.option.project': 'PROJECT_QUERY',
+                            'contact.option.collab': 'COLLABORATION_REQ',
+                            'contact.option.system': 'SYSTEM_MAINTENANCE',
+                            'contact.option.general': 'GENERAL_DATA_TX',
+                            'contact.button': 'SEND_PACKET_NOW',
+                            'contact.log.check': '&gt; CHECKING_PACKET_INTEGRITY... OK',
+                            'contact.log.encrypt': '&gt; ENCRYPTING_DATA_STREAM... OK',
+                            'contact.log.ready': '&gt; READY_FOR_UPLINK',
+                            'contact.sidebar.comms': 'Direct_Comms',
+                            'contact.sidebar.comms.link': 'COMMS_LINK: HI@MATTHIEUPEREZ.DEV',
+                            'contact.sidebar.sync': 'Sync_Frequency',
+                            'contact.sidebar.sync.value': 'TZ: GMT+1 (PARIS/FR)',
+                            'contact.sidebar.uptime': 'Uptime',
+                            'contact.sidebar.uptime.value': '99.9% // PERSISTENT_REPLY_MODE',
+                            'contact.copyright': '(C) 1984-2024 MATTHIEU_PEREZ // ALL_RIGHTS_RESERVED',
+                        },
+                        fr: {
+                            'contact.header': 'MATTHIEU_PEREZ // INTERFACE_CONTACT',
+                            'contact.init': '[CONTACT_INITIÉ]',
+                            'contact.subtitle': 'ÉTABLISSEMENT D’UNE CONNEXION SÉCURISÉE AU NŒUD_M.PEREZ',
+                            'contact.status': 'Flux_Buffer_Entrée_049',
+                            'contact.label.name': 'NOM_ID',
+                            'contact.label.email': 'ADRESSE_EMAIL',
+                            'contact.label.subject': 'TYPE_DE_SUJET',
+                            'contact.label.message': 'TAMPON_MESSAGE',
+                            'contact.option.project': 'REQUÊTE_PROJET',
+                            'contact.option.collab': 'DEMANDE_DE_COLLAB',
+                            'contact.option.system': 'MAINTENANCE_SYSTÈME',
+                            'contact.option.general': 'TRANSMISSION_GÉNÉRALE',
+                            'contact.button': 'ENVOYER_PAQUET_MAINTENANT',
+                            'contact.log.check': '&gt; VÉRIFICATION_INTÉGRITÉ_PAQUET... OK',
+                            'contact.log.encrypt': '&gt; CHIFFREMENT_FLUX... OK',
+                            'contact.log.ready': '&gt; PRÊT_POUR_LIAISON',
+                            'contact.sidebar.comms': 'Communications_Directes',
+                            'contact.sidebar.comms.link': 'LIEN_COMMS: HI@MATTHIEUPEREZ.DEV',
+                            'contact.sidebar.sync': 'Fréquence_Synchronisation',
+                            'contact.sidebar.sync.value': 'TZ: GMT+1 (PARIS/FR)',
+                            'contact.sidebar.uptime': 'Disponibilité',
+                            'contact.sidebar.uptime.value': '99.9% // MODE_RÉPONSE_PERSISTANT',
+                            'contact.copyright': '(C) 1984-2024 MATTHIEU_PEREZ // TOUS_DROITS_RÉSERVÉS',
+                        },
+                        es: {
+                            'contact.header': 'MATTHIEU_PEREZ // INTERFAZ_DE_CONTACTO',
+                            'contact.init': '[CONTACTO_INICIADO]',
+                            'contact.subtitle': 'ESTABLECIENDO CONEXIÓN SEGURA CON EL NODO: M.PEREZ',
+                            'contact.status': 'Entrada_Buffer_Secuencia_049',
+                            'contact.label.name': 'IDENTIFICADOR_NOMBRE',
+                            'contact.label.email': 'DIRECCIÓN_EMAIL',
+                            'contact.label.subject': 'TIPO_DE_ASUNTO',
+                            'contact.label.message': 'BÚFER_DE_MENSAJE',
+                            'contact.option.project': 'CONSULTA_PROYECTO',
+                            'contact.option.collab': 'SOLICITUD_COLABORACIÓN',
+                            'contact.option.system': 'MANTENIMIENTO_SISTEMA',
+                            'contact.option.general': 'TRANSFERENCIA_GENERAL',
+                            'contact.button': 'ENVIAR_PAQUETE_AHORA',
+                            'contact.log.check': '&gt; VERIFICANDO_INTEGRIDAD_DE_PAQUETE... OK',
+                            'contact.log.encrypt': '&gt; CIFRANDO_FLUJO_DE_DATOS... OK',
+                            'contact.log.ready': '&gt; LISTO_PARA_ENLACE',
+                            'contact.sidebar.comms': 'Comunicaciones_Directas',
+                            'contact.sidebar.comms.link': 'ENLACE_COMMS: HI@MATTHIEUPEREZ.DEV',
+                            'contact.sidebar.sync': 'Frecuencia_Sincronización',
+                            'contact.sidebar.sync.value': 'TZ: GMT+1 (PARÍS/FR)',
+                            'contact.sidebar.uptime': 'Disponibilidad',
+                            'contact.sidebar.uptime.value': '99.9% // MODO_RESPUESTA_PERSISTENTE',
+                            'contact.copyright': '(C) 1984-2024 MATTHIEU_PEREZ // TODOS_LOS_DERECHOS_RESERVADOS',
+                        },
+                    };
+                    const storageKey = 'mperez-contact-lang';
+                    const switcher = document.querySelector('.lang-switcher');
+                    const buttons = switcher ? switcher.querySelectorAll('button') : [];
+                    const applyLanguage = (lang) => {
+                        document.querySelectorAll('[data-i18n]').forEach((node) => {
+                            const key = node.getAttribute('data-i18n');
+                            const dictionary = translations[lang] || translations.en;
+                            if (dictionary && dictionary[key]) {
+                                node.innerHTML = dictionary[key];
+                            }
+                        });
+                        buttons.forEach((btn) => {
+                            btn.classList.toggle('active', btn.dataset.lang === lang);
+                        });
+                        try {
+                            localStorage.setItem(storageKey, lang);
+                        } catch (error) {
+                            // ignore
+                        }
+                    };
+                    buttons.forEach((button) => {
+                        button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+                    });
+                    const initialLang = (localStorage.getItem(storageKey) || 'en');
+                    applyLanguage(initialLang);
+                })();
+            </script>
         </div>
     </body></html>

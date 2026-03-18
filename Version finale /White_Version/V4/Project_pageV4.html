@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Matthieu Perez - Projects</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'cream': '#f6f0e3',
+                            'dark-brown': '#3d352b',
+                            'muted-green': '#658b7c',
+                            'pale-yellow': '#eaddad',
+                            'border-green': '#658b7c'
+                        },
+                        fontFamily: {
+                            'serif': ['"Playfair Display"', 'Georgia', 'serif'],
+                            'sans': ['"Inter"', 'Helvetica', 'Arial', 'sans-serif']
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: #f6f0e3;
+                color: #3d352b;
+            }
+            .grid-bg {
+                background-image: linear-gradient(to right, rgba(101, 139, 124, 0.2) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(101, 139, 124, 0.2) 1px, transparent 1px);
+                background-size: 40px 40px;
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+    </head>
+    <body class="font-sans antialiased min-h-screen flex flex-col items-center">
+        <div class="w-full max-w-5xl px-6 py-8">
+            <header class="flex justify-start space-x-6 text-sm mb-16 font-medium">
+                <a class="hover:opacity-70 transition-opacity" href="AboutME_V4.html">1. e4 About</a>
+                <a class="hover:opacity-70 transition-opacity text-dark-brown/90 font-semibold" href="#projects">2. Nf3 Projects</a>
+                <a class="hover:opacity-70 transition-opacity" href="Contact_page_V4.html">3. Bc4 Contact</a>
+            </header>
+            <main>
+                <section class="text-center mb-16">
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 max-w-4xl mx-auto text-dark-brown">
+                        SYSTEM_PROJECTS_STABLE
+                    </h1>
+                    <p class="text-sm font-medium uppercase tracking-[0.5em] text-muted-green mb-8">
+                        Archives stratégiques • Rituels numériques • Impact mesurable
+                    </p>
+                    <div class="relative w-full max-w-3xl mx-auto h-[320px] border border-border-green rounded-xl grid-bg flex items-center justify-center mb-8 overflow-hidden bg-cream/70">
+                        <img alt="Wireframe knight" class="absolute h-3/4 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgH1sHFAXrWJzEMpmBfZ3PC8Q0UHKiB8Nb1Y2JlIzHYE-P9uiyHh-0FOoMJf7bd-jz2hql6wS96gAYZJ9M4rDJsPzwen4EWRFtROsiBF9Y6tOeEZrb4q8ITz6yyCLls2O0s7P-f2DN2u4ms-R4zoBQ8s-9dtG-GND2lK8m_s0rXjXT6tl4C8MMQmppn4QD4sqvJNJchky4e2Ebr0uIEh-LZ6e4N4O6LHYhkZ7Wywv4FKwvEmPCSrEzvk83oy_FBldIee2KT5dJEoY"/>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-1 text-cream text-lg font-semibold">
+                            <span>PROJETS</span>
+                            <span class="text-xs tracking-[1em] text-cream/60">STRATEGY NODE</span>
+                        </div>
+                    </div>
+                    <a href="Contact_page_V4.html" class="border border-dark-brown px-6 py-2 rounded-full hover:bg-dark-brown hover:text-cream transition-colors font-medium bg-transparent inline-block">
+                        Demander une mission
+                    </a>
+                </section>
+                <section id="projects" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                    <article class="border border-border-green p-6 bg-cream/50 rounded-lg shadow-[0_10px_30px_rgba(61,53,43,0.1)]">
+                        <p class="text-xs uppercase tracking-[0.5em] mb-4 text-muted-green">2024 — SYSTEMS</p>
+                        <h3 class="font-serif text-2xl text-dark-brown mb-4">PROJECT_KNIGHT</h3>
+                        <p class="text-sm leading-relaxed text-dark-brown/80 mb-4">
+                            Architecture de protocoles décentralisés et orchestrations sécurisées qui stabilisent les opérations critiques.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[10px] uppercase text-dark-brown/60 mb-4">
+                            <span class="border border-muted-green px-2 py-1">Solidity</span>
+                            <span class="border border-muted-green px-2 py-1">React</span>
+                            <span class="border border-muted-green px-2 py-1">Node.js</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs font-semibold uppercase text-dark-brown">
+                            <span class="text-muted-green">Status: Mainnet Live</span>
+                            <div class="space-x-2">
+                                <a class="underline" href="#">View source</a>
+                                <a class="underline" href="#">Docs</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="border border-border-green p-6 bg-cream/50 rounded-lg shadow-[0_10px_30px_rgba(61,53,43,0.1)]">
+                        <p class="text-xs uppercase tracking-[0.5em] mb-4 text-muted-green">2023 — RESEARCH</p>
+                        <h3 class="font-serif text-2xl text-dark-brown mb-4">PROJECT_ROOK</h3>
+                        <p class="text-sm leading-relaxed text-dark-brown/80 mb-4">
+                            formation en électronique et programmation Arduino.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[10px] uppercase text-dark-brown/60 mb-4">
+                            <span class="border border-muted-green px-2 py-1">Rust</span>
+                            <span class="border border-muted-green px-2 py-1">WASM</span>
+                            <span class="border border-muted-green px-2 py-1">Go</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs font-semibold uppercase text-dark-brown">
+                            <span class="text-muted-green">Status: Beta Stable</span>
+                            <div class="space-x-2">
+                                <a class="underline" href="#">View source</a>
+                                <a class="underline" href="#">Docs</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="border border-border-green p-6 bg-cream/50 rounded-lg shadow-[0_10px_30px_rgba(61,53,43,0.1)]">
+                        <p class="text-xs uppercase tracking-[0.5em] mb-4 text-muted-green">2022 — AI</p>
+                        <h3 class="font-serif text-2xl text-dark-brown mb-4">PROJECT_BISHOP</h3>
+                        <p class="text-sm leading-relaxed text-dark-brown/80 mb-4">
+                            Modèles auto-défensifs et IA appliquée aux scénarios de cybersécurité, avec surveillance prédictive.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[10px] uppercase text-dark-brown/60 mb-4">
+                            <span class="border border-muted-green px-2 py-1">TypeScript</span>
+                            <span class="border border-muted-green px-2 py-1">Python</span>
+                            <span class="border border-muted-green px-2 py-1">AWS</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs font-semibold uppercase text-dark-brown">
+                            <span class="text-muted-green">Status: Sandbox</span>
+                            <div class="space-x-2">
+                                <a class="underline" href="#">View source</a>
+                                <a class="underline" href="#">Docs</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 text-center">
+                    <div class="border border-border-green rounded-lg p-6 bg-cream/70">
+                        <p class="text-xs uppercase tracking-[0.5em] text-muted-green mb-2">Uptime</p>
+                        <p class="text-2xl font-serif text-dark-brown">99.982%</p>
+                        <p class="text-[10px] uppercase text-dark-brown/70">Knight node</p>
+                    </div>
+                    <div class="border border-border-green rounded-lg p-6 bg-cream/70">
+                        <p class="text-xs uppercase tracking-[0.5em] text-muted-green mb-2">Latency</p>
+                        <p class="text-2xl font-serif text-dark-brown">14ms</p>
+                        <p class="text-[10px] uppercase text-dark-brown/70">Optimized routes</p>
+                    </div>
+                    <div class="border border-border-green rounded-lg p-6 bg-cream/70">
+                        <p class="text-xs uppercase tracking-[0.5em] text-muted-green mb-2">Encryption</p>
+                        <p class="text-2xl font-serif text-dark-brown">AES-256-GCM</p>
+                        <p class="text-[10px] uppercase text-dark-brown/70">Secure stack</p>
+                    </div>
+                </section>
+                <section class="border border-border-green rounded-3xl p-10 text-center bg-cream/70">
+                    <p class="uppercase text-xs tracking-[0.5em] text-muted-green mb-4">Archives</p>
+                    <h2 class="font-serif text-3xl text-dark-brown mb-4">Envie d’une consultation stratégique ?</h2>
+                    <p class="text-sm leading-relaxed mb-6 text-dark-brown/80">Je peux aligner votre roadmap avec les mouvements tactiques du code et de la stratégie.</p>
+                    <a href="Contact_page_V4.html" class="border border-dark-brown px-6 py-2 rounded-full hover:bg-dark-brown hover:text-cream transition-colors font-medium bg-transparent inline-block">
+                        Planifier une réunion</a>
+                </section>
+            </main>
+            <footer class="mt-16 text-center text-xs uppercase tracking-[0.4em] text-dark-brown/60">
+                © 2024 M_PEREZ_INFRASTRUCTURE — TEMPS : 3.1416
+            </footer>
+        </div>
+    </body></html>
